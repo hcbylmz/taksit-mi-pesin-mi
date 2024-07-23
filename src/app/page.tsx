@@ -61,16 +61,16 @@ export default function Home() {
         <select name="interests" id="interest-select" value={interestPeriod} onChange={handleSelectInterestPeriod}>
           <option value="" >--Faiz vadesini seçin--</option>
           <option value="Aylık">Aylık</option>
-          <option value="Yıllık">Yıllık</option>
+          {/* <option value="Yıllık">Yıllık</option> */}
         </select>
         <label>Faiz oranı</label>
-        <input value={interestRate} onChange={(e) => setInterestRate(e.target.value)} type="number" />
+        <input value={interestRate} onChange={(e) => setInterestRate(parseFloat(e.target.value))} type="number" />
         <label>Peşin ödeme tutarı</label>
-        <input value={initialPayment} onChange={(e) => setInitialPayment(e.target.value)} type="number" />
+        <input value={initialPayment} onChange={(e) => setInitialPayment(parseFloat(e.target.value))} type="number" />
         <label>Taksitli toplam tutar</label>
-        <input value={totalInstallment} onChange={(e) => setTotalInstallment(e.target.value)} type="number" />
+        <input value={totalInstallment} onChange={(e) => setTotalInstallment(parseFloat(e.target.value))} type="number" />
         <label>Kaç taksit?</label>
-        <input value={numberOfInstallments} onChange={(e) => setNumberOfInstallments(e.target.value)} type="number" />
+        <input value={numberOfInstallments} onChange={(e) => setNumberOfInstallments(parseFloat(e.target.value))} type="number" />
 
       </div>
 
